@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionecolesup.profileController">
+   <children>
+      <Pane prefHeight="652.0" prefWidth="968.0" style="-fx-background-color: #2e3967;">
+         <children>
+            <AnchorPane layoutX="98.0" layoutY="20.0" prefHeight="653.0" prefWidth="969.0">
+               <children>
+                  <Pane layoutX="56.0" layoutY="103.0" prefHeight="415.0" prefWidth="685.0" style="-fx-background-color: #ee3131; -fx-background-radius: 10;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Pane>
+                  <Pane layoutX="56.0" layoutY="215.0" prefHeight="342.0" prefWidth="685.0" style="-fx-background-color: #e3e5e8; -fx-background-radius: 10;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3e5e8" height="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="685.0" />
+                        <Circle fill="#e3e5e8" layoutX="98.0" layoutY="30.0" radius="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#ee3131" layoutX="98.0" layoutY="30.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Pane layoutX="15.0" layoutY="111.0" prefHeight="209.0" prefWidth="654.0" style="-fx-background-color: #f2f3f5;">
+                           <children>
+                              <VBox prefHeight="209.0" prefWidth="654.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="63.0" prefWidth="654.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="538.0">
+                                             <children>
+                                                <Label text="NOM D’UTILISATEUR" textFill="#4f5660" />
+                                                <Label fx:id="nomUtilisateur" text="Toto" />
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" onAction="#Modifier_nomUtilisateur" prefHeight="33.0" prefWidth="87.0" style="-fx-background-radius: 4,67; -fx-cursor: hand;" styleClass="gris_button" stylesheets="@styles/style.css" text="Modifier" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="63.0" prefWidth="654.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="538.0">
+                                             <children>
+                                                <Label text="NUMÉRO DE TÉLÉPHONE" textFill="#4f5660" />
+                                                <Label fx:id="tel" text="0000000000" />
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" onAction="#Modifier_tel" prefHeight="33.0" prefWidth="87.0" style="-fx-background-radius: 4,67; -fx-cursor: hand;" styleClass="gris_button" stylesheets="@styles/style.css" text="Modifier" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="73.0" prefHeight="63.0" prefWidth="654.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="538.0">
+                                             <children>
+                                                <Label text="MOT DE PASSE" textFill="#4f5660" />
+                                                <Label fx:id="motDePass" text="**********" />
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" onAction="#Modifier_MotDePass" prefHeight="33.0" prefWidth="87.0" style="-fx-background-radius: 4,67; -fx-cursor: hand;" styleClass="gris_button" stylesheets="@styles/style.css" text="Modifier" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Label fx:id="nomComplete" layoutX="177.0" layoutY="23.0" text="Bob Alice">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="71.0" fitWidth="58.0" layoutX="69.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@avatar.png" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="454.0" layoutY="20.0" prefHeight="33.0" prefWidth="170.0" style="-fx-background-color: #2e3967; -fx-background-radius: 4,67;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="33.0" prefWidth="58.0" text="Badge" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="514.0" layoutY="20.0" prefHeight="33.0" prefWidth="155.0" style="-fx-background-color: #ee3131; -fx-background-radius: 4,67;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="10.0" layoutY="8.0" prefHeight="17.0" prefWidth="135.0" text="Administrateur" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Label layoutX="56.0" layoutY="52.0" text="Mon Compte" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="717.0" layoutY="53.0" mnemonicParsing="false" onAction="#Retour_DashBoard" prefHeight="17.0" prefWidth="24.0" style="-fx-background-radius: 100; -fx-cursor: hand;" styleClass="red_button" stylesheets="@styles/style.css" text="X" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children></Pane>
+   </children>
+</Pane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionecolesup.FiliereController">
+    <children>
+        <AnchorPane layoutX="-3.0" layoutY="-2.0" prefHeight="640.0" prefWidth="293.0">
+            <children>
+                <ImageView fitHeight="745.0" fitWidth="365.0" layoutX="-38.0" layoutY="-89.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Filiere.png" />
+                    </image>
+                </ImageView>
+                <VBox layoutY="134.0" prefHeight="521.0" prefWidth="327.0">
+                    <children>
+                  <AnchorPane prefHeight="147.0" prefWidth="327.0">
+                     <children>
+                              <Button fx:id="PR_button" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="33.0" layoutY="48.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="262.0" style="-fx-background-color: #ee3131; -fx-background-radius: 20;" text="Nombre des Filieres :" textFill="WHITE">
+                                  <font>
+                                      <Font size="16.0" />
+                                  </font>
+                           <cursor>
+                              <Cursor fx:constant="DISAPPEAR" />
+                           </cursor>
+                              </Button>
+                        <Label fx:id="lblNbFilieres" layoutX="150.0" layoutY="79.0" prefHeight="17.0" prefWidth="29.0" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="318.0" layoutY="-1.0" prefHeight="136.0" prefWidth="629.0">
+            <children>
+                <ImageView fitHeight="230.0" fitWidth="642.0" layoutX="5.0" layoutY="-41.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@ListFiliere.png" />
+                    </image>
+                </ImageView>
+                <AnchorPane layoutY="24.0" prefHeight="87.0" prefWidth="644.0">
+               <children>
+                  <Button fx:id="Ruturn_btn" layoutX="35.0" layoutY="24.0" mnemonicParsing="false" onAction="#RuturnServices" prefHeight="39.0" prefWidth="100.0" style="-fx-background-radius: 50; -fx-cursor: hand;" styleClass="red_button" stylesheets="@styles/style.css" text="Retour" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="177.0" layoutY="24.0" mnemonicParsing="false" onAction="#ADDF" prefHeight="39.0" prefWidth="196.0" style="-fx-background-radius: 50; -fx-cursor: hand;" styleClass="white_button" stylesheets="@styles/style.css" text="Ajouter Une Filière" textAlignment="CENTER" textFill="#ee3131">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="408.0" layoutY="22.0" mnemonicParsing="false" onAction="#filierelist" prefHeight="33.0" prefWidth="196.0" style="-fx-background-radius: 50; -fx-cursor: hand;" styleClass="white_button" stylesheets="@styles/style.css" text="Afficher La liste" textAlignment="CENTER" textFill="#ee3131">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutX="320.0" layoutY="188.0" prefHeight="452.0" prefWidth="641.0">
+         <children>
+            <VBox layoutX="10.0" layoutY="13.0" prefHeight="439.0" prefWidth="625.0">
+               <children>
+                  <TableView fx:id="tableFiliere" prefHeight="343.0" prefWidth="613.0">
+                     <columns>
+                        <TableColumn fx:id="IDF" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" resizable="false" text="ID" />
+                        <TableColumn fx:id="Nomdufiliere" maxWidth="117.0" minWidth="110.0" prefWidth="117.0" resizable="false" text="NomFiliere" />
+                        <TableColumn fx:id="Nom_du_Responsable" maxWidth="128.0" minWidth="110.0" prefWidth="121.0" resizable="false" text="Responsable" />
+                        <TableColumn fx:id="Niveau" maxWidth="75.0" minWidth="57.0" prefWidth="57.0" resizable="false" text="Niveau" />
+                        <TableColumn fx:id="Nombre_Etudiants" maxWidth="110.0" minWidth="92.0" prefWidth="92.0" resizable="false" text="NBREtudiants" />
+                        <TableColumn fx:id="Nombre_Modules" maxWidth="188.0" minWidth="0.0" prefWidth="105.0" resizable="false" text="NBRModules" />
+                        <TableColumn fx:id="semestre" maxWidth="209.0" minWidth="21.0" prefWidth="91.0" resizable="false" text="NBRSemestres" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#deletefiliere" prefHeight="44.0" prefWidth="212.0" style="-fx-background-radius: 50; -fx-cursor: hand;" styleClass="red_button" stylesheets="@styles/style.css" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Ruturn_btn11" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#UPDF" prefHeight="44.0" prefWidth="212.0" style="-fx-background-radius: 50; -fx-cursor: hand;" styleClass="blue_button" stylesheets="@styles/style.css" text="Update" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+    </children>
+</Pane>

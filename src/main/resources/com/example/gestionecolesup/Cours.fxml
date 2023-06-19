@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionecolesup.CoursController">
+   <children>
+      <VBox prefHeight="640.0" prefWidth="960.0">
+         <children>
+            <Pane prefHeight="96.0" prefWidth="681.0" style="-fx-background-color: #ee3131;">
+               <children>
+                  <AnchorPane prefHeight="96.0" prefWidth="655.0">
+                     <children>
+                        <HBox layoutX="383.0" layoutY="26.0" prefHeight="61.0" prefWidth="559.0">
+                           <children>
+                              <HBox prefHeight="64.0" prefWidth="559.0" spacing="18.0">
+                                 <children>
+                                    <ChoiceBox fx:id="filiere" cache="true" prefHeight="46.0" prefWidth="260.0" style="-fx-background-color: #fff; -fx-background-radius: 20;" />
+                                    <ChoiceBox fx:id="niveau" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="260.0" style="-fx-background-color: #fff; -fx-background-radius: 20;" />
+                                    <Button mnemonicParsing="false" onAction="#ShowlistCours" prefHeight="46.0" prefWidth="260.0" style="-fx-cursor: hand; -fx-background-radius: 18;" styleClass="blue_button" stylesheets="@styles/style.css" text="Afficher Cours" textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Button layoutX="265.0" layoutY="33.0" mnemonicParsing="false" onAction="#returnScolarite" prefHeight="38.0" prefWidth="87.0" style="-fx-cursor: hand; -fx-background-radius: 15;" styleClass="blue_button" stylesheets="@styles/style.css" text="Retour" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="46.0" fitWidth="175.0" layoutX="27.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@CoursLabel.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane prefHeight="5.0" prefWidth="960.0" style="-fx-background-color: #2e3967;" />
+            <AnchorPane prefHeight="449.0" prefWidth="960.0">
+               <children>
+                  <HBox fillHeight="false" prefHeight="448.0" prefWidth="960.0">
+                     <children>
+                        <Pane prefHeight="423.0" prefWidth="347.0" style="-fx-background-color: #fff; -fx-background-radius: 20;">
+                           <children>
+                              <VBox layoutX="18.0" layoutY="2.0" prefHeight="413.0" prefWidth="299.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="62.0" prefWidth="299.0" text="Remplissez Ce Formulaire &#10;Pour Intégrer Un Nouveau Cours" textAlignment="CENTER" textFill="#2e3967">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="12.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="nom" layoutX="10.0" layoutY="88.0" prefHeight="53.0" prefWidth="299.0" promptText="Cours..">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="25.0" top="10.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="semestre" layoutX="10.0" layoutY="83.0" prefHeight="53.0" prefWidth="264.0" promptText="Semestre..">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="25.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="professeur" layoutX="10.0" layoutY="169.0" prefHeight="53.0" prefWidth="264.0" promptText="Professeur(e)">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="18.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Separator prefWidth="200.0" style="-fx-background-color: #2e3967 #2e3967;">
+                                       <VBox.margin>
+                                          <Insets bottom="24.0" top="5.0" />
+                                       </VBox.margin></Separator>
+                                    <Button mnemonicParsing="false" onAction="#addcours" prefHeight="52.0" prefWidth="360.0" style="-fx-background-radius: 18; -fx-cursor: hand;" styleClass="blue_button" stylesheets="@styles/style.css" text="Ajouter" textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <effect>
+                              <DropShadow color="#bcbcbc" radius="40.3925" width="142.57" />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" top="15.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <TableView fx:id="tablecours" prefHeight="424.0" prefWidth="583.0">
+                          <columns>
+                              <TableColumn fx:id="nomt" maxWidth="290.0" minWidth="105.0" prefWidth="207.0" resizable="false" text="Cours" />
+                              <TableColumn fx:id="semestret" maxWidth="391.0" minWidth="0.0" prefWidth="187.0" resizable="false" text="Semestre" />
+                              <TableColumn fx:id="professeurt" maxWidth="290.0" minWidth="105.0" prefWidth="177.0" resizable="false" text="Professeur(e)" />
+                          </columns>
+                           <HBox.margin>
+                              <Insets right="10.0" top="15.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="96.0" prefWidth="960.0" style="-fx-background-color: #2e3967;">
+               <children>
+                  <AnchorPane prefHeight="96.0" prefWidth="960.0">
+                     <children>
+                        <HBox layoutX="7.0" layoutY="-2.0" prefHeight="97.0" prefWidth="951.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="97.0" prefWidth="632.0" spacing="20.0">
+                                 <children>
+                                    <TextField fx:id="Nom" prefHeight="46.0" prefWidth="190.0" promptText="Cours..">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="Semestre" prefHeight="46.0" prefWidth="190.0" promptText="Semestre..">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="Professeur" prefHeight="46.0" prefWidth="190.0" promptText="Professeur(e)">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="97.0" prefWidth="301.0" spacing="10.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#updatecours" prefHeight="46.0" prefWidth="360.0" style="-fx-background-radius: 18; -fx-cursor: hand;" styleClass="white_button" stylesheets="@styles/style.css" text="Update" textFill="#ee3131">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deletecours" prefHeight="46.0" prefWidth="360.0" style="-fx-background-radius: 18; -fx-cursor: hand;" styleClass="red_button" stylesheets="@styles/style.css" text="Delete" textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

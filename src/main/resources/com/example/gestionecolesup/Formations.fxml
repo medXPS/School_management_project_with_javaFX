@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionecolesup.RH_ListsController">
+    <children>
+      <VBox layoutX="328.0" layoutY="195.0" prefHeight="378.0" prefWidth="634.0">
+         <children>
+            <ScrollPane prefHeight="547.0" prefWidth="634.0">
+               <content>
+                  <VBox prefHeight="377.0" prefWidth="617.0">
+                     <children>
+                        <AnchorPane prefHeight="320.0" prefWidth="617.0">
+                           <children>
+                              <TableView fx:id="tableFormation" layoutX="12.0" layoutY="7.0" prefHeight="356.0" prefWidth="599.0">
+                                 <columns>
+                                    <TableColumn fx:id="object" maxWidth="177.0" minWidth="177.0" prefWidth="177.0" resizable="false" text="Object" />
+                                    <TableColumn fx:id="date" maxWidth="92.0" minWidth="92.0" prefWidth="92.0" resizable="false" text="Date" />
+                                    <TableColumn fx:id="formateur" maxWidth="121.0" minWidth="121.0" prefWidth="121.0" resizable="false" text="Formateur" />
+                                    <TableColumn fx:id="description" maxWidth="208.0" minWidth="208.0" prefWidth="208.0" resizable="false" text="Description" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+        <AnchorPane layoutX="-3.0" layoutY="-2.0" prefHeight="640.0" prefWidth="293.0">
+            <children>
+                <ImageView fitHeight="733.0" fitWidth="330.0" layoutX="2.0" layoutY="-89.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Formation.png" />
+                    </image>
+                </ImageView>
+                <VBox layoutY="134.0" prefHeight="521.0" prefWidth="327.0">
+                    <children>
+                  <AnchorPane prefHeight="147.0" prefWidth="327.0">
+                     <children>
+                              <Button fx:id="PR_button" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="33.0" layoutY="48.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="262.0" style="-fx-background-color: #ee3131; -fx-background-radius: 20;" text="Nombres des Formations :" textFill="WHITE">
+                                  <font>
+                                      <Font size="16.0" />
+                                  </font>
+                              </Button>
+                        <Label fx:id="lblNbFormation" layoutX="142.0" layoutY="74.0" prefHeight="0.0" prefWidth="44.0" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="318.0" layoutY="-1.0" prefHeight="136.0" prefWidth="629.0">
+            <children>
+                <ImageView fitHeight="229.0" fitWidth="636.0" layoutX="10.0" layoutY="-41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ListFormation.png" />
+               </image>
+                </ImageView>
+                <AnchorPane layoutY="24.0" prefHeight="87.0" prefWidth="644.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="8.0" layoutY="-17.0" prefHeight="113.0" prefWidth="636.0" spacing="40.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#backtorh" prefHeight="33.0" prefWidth="77.0" style="-fx-background-radius: 10; -fx-cursor: hand;" styleClass="red_button" stylesheets="@styles/style.css" text="Retour" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#goforumformation" prefHeight="33.0" prefWidth="200.0" style="-fx-background-radius: 10; -fx-cursor: hand;" styleClass="white_button" stylesheets="@styles/style.css" text="Ajouter Une Formation" textAlignment="CENTER" textFill="#2e3967">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#formationlist" prefHeight="33.0" prefWidth="200.0" style="-fx-background-radius: 10; -fx-cursor: hand;" styleClass="white_button" stylesheets="@styles/style.css" text="Afficher la liste" textFill="#2e3967">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutX="328.0" layoutY="578.0" prefHeight="63.0" prefWidth="635.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="1.0" prefHeight="56.0" prefWidth="631.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#deleteformation" prefHeight="33.0" prefWidth="587.0" style="-fx-cursor: hand; -fx-background-radius: 50;" styleClass="red_button" stylesheets="@styles/style.css" text="Supprimer Une Formation" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+    </children>
+</Pane>

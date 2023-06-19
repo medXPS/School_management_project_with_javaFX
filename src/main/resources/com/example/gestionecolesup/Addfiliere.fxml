@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionecolesup.ADDFCONT">
+   <children>
+      <AnchorPane layoutX="-2.0" layoutY="1.0" prefHeight="640.0" prefWidth="948.0">
+         <children>
+            <VBox layoutY="-3.0" prefHeight="640.0" prefWidth="879.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="195.0" fitWidth="1086.0" layoutX="-30.0" layoutY="-49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@AddImageTop.png" />
+                           </image>
+                        </ImageView>
+                        <ButtonBar layoutX="114.0" layoutY="112.0" prefHeight="40.0" prefWidth="200.0" />
+                        <Button layoutX="73.0" layoutY="31.0" mnemonicParsing="false" onAction="#Back" prefHeight="30.0" prefWidth="85.0" style="-fx-background-radius: 50; -fx-cursor: hand;" styleClass="red_button" stylesheets="@styles/style.css" text="Retour" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="716.0" prefWidth="887.0">
+                     <children>
+                        <Pane layoutX="35.0" layoutY="69.0" prefHeight="328.0" prefWidth="895.0" style="-fx-background-color: #ee3131; -fx-background-radius: 20;">
+                           <children>
+                              <VBox layoutX="33.0" prefHeight="327.0" prefWidth="826.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="17.0" prefWidth="896.0" text="Remplir Le formulaire" textFill="WHITE">
+                                       <font>
+                                          <Font size="34.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" top="18.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Separator prefHeight="0.0" prefWidth="742.0">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </Separator>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tous les champs du formulaire sont requis. Veuillez les remplir avant de continuer." textAlignment="CENTER" wrappingWidth="825.0908203125">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="30.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <HBox prefHeight="60.0" prefWidth="826.0" spacing="16.0">
+                                       <children>
+                                          <TextField fx:id="Nom_du_filiere" prefHeight="53.0" prefWidth="264.0" promptText="Nom du Filière" style="-fx-background-radius: 18;">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="Nom_du_Responsable" layoutX="274.0" layoutY="10.0" prefHeight="53.0" prefWidth="264.0" promptText="Nom du Responsable.." style="-fx-background-radius: 18;">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="Niveau" layoutX="10.0" layoutY="10.0" prefHeight="53.0" prefWidth="264.0" promptText="Niveau" style="-fx-background-radius: 18;">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="151.0" prefHeight="60.0" prefWidth="826.0" spacing="15.0">
+                                       <children>
+                                          <TextField fx:id="Nombre_Etudiants" prefHeight="52.0" prefWidth="195.0" promptText="Nombre d’Etudiants.." style="-fx-background-radius: 18;">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="Nombre_Modules" prefHeight="52.0" prefWidth="195.0" promptText="Nombre des Modules.." style="-fx-background-radius: 18;">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="semestre" layoutX="10.0" layoutY="10.0" prefHeight="52.0" prefWidth="195.0" promptText="Nombre des Semestres.." style="-fx-background-radius: 18;">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button mnemonicParsing="false" onAction="#addfiliere" prefHeight="52.0" prefWidth="195.0" style="-fx-cursor: hand; -fx-background-radius: 18;" styleClass="blue_button" stylesheets="@styles/style.css" text="Ajouter" textFill="WHITE">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

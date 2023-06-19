@@ -1,0 +1,36 @@
+.blue_button {
+    -fx-background-color: #2e3967;
+}
+
+.blue_button:hover {
+    -fx-background-color: #232c4f;
+}
+
+.red_button {
+    -fx-background-color: #ee3131;
+}
+
+.red_button:hover {
+    -fx-background-color: #f04646;
+}
+
+.white_button {
+	-fx-background-color:  #eeeeee;
+}
+
+.white_button:hover {
+    -fx-background-color: #d6d6d6;
+}
+
+.gris_button {
+	-fx-background-color:   #4f5660;
+}
+
+.gris_button:hover {
+    -fx-background-color: #3e444c;
+}
+
+.trans_button {
+    -fx-color: white;
+}
+
